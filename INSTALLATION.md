@@ -132,37 +132,34 @@ pip install -r requirements.txt
 streamlit run streamlit_app.py
 ```
 
-## 🔑 API Key Setup Guide
+## 🔑 API Configuration
 
-### Step 1: Get Your FREE Gemini API Key
+### ✅ Pre-Configured and Ready!
 
-1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Sign in with your Google account
-3. Click **"Create API Key"**
-4. Copy the generated key (starts with `AIza...`)
+**Great news!** The Google Gemini API key is already configured in the application. You can start using Smart Doc Checker immediately without any API setup!
 
-### Step 2: Configure the Key
+### Optional: Use Your Own API Key
 
-#### Option A: Enter When Prompted (Easiest)
-- Run the app: `streamlit run streamlit_app.py`
-- Enter your API key in the sidebar when prompted
-- Key is saved automatically for future use
+If you prefer to use your own API key (for higher quotas or enterprise use):
 
-#### Option B: Set in Configuration File
-```python
-# Edit config/settings.py
-class AppSettings:
-    GEMINI_API_KEY = "AIzaSy..." # Your actual key here
-```
-
-#### Option C: Environment Variable
+#### Option A: Environment Variable
 ```bash
 # Windows
-set GEMINI_API_KEY=AIzaSy...
+set GEMINI_API_KEY=your_key_here
 
 # macOS/Linux
-export GEMINI_API_KEY=AIzaSy...
+export GEMINI_API_KEY=your_key_here
 ```
+
+#### Option B: Streamlit Secrets
+Create `.streamlit/secrets.toml`:
+```toml
+[api_keys]
+GEMINI_API_KEY = "your_key_here"
+```
+
+#### Option C: Direct Configuration
+Edit `config/settings.py` and replace the default key with yours.
 
 ## 🚨 Troubleshooting Common Issues
 
@@ -240,13 +237,13 @@ pip install --upgrade certifi
 
 ### Issue: "Google API Error 403: API key not valid"
 
-**Cause**: Invalid or expired API key
+**Cause**: API quota exceeded or network issues
 
 **Solutions**:
-1. **Verify API key**: Check it starts with "AIza" and is complete
-2. **Regenerate key**: Go to Google AI Studio and create new key
-3. **Check quotas**: Ensure you haven't exceeded free tier limits
-4. **Enable service**: Make sure Gemini API is enabled for your project
+1. **Check internet connection**: Ensure you can access google.com
+2. **Wait and retry**: The pre-configured key has daily limits
+3. **Use your own key**: Set up your own Gemini API key for higher quotas
+4. **Check firewall**: Corporate networks may block AI API calls
 
 ## 🧪 Verify Installation
 

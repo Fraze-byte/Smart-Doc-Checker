@@ -65,26 +65,20 @@ pip install -r requirements.txt
 ```
 *(This will take 1-2 minutes)*
 
-### Step 7: Get Your FREE API Key
-
-1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Sign in with your Google account
-3. Click **"Create API Key"**
-4. **Copy the key** (it looks like: `AIzaSyBBJ5gMwH0AsuBN92G5i35-zoSEwVq5pWY`)
-
-### Step 8: Launch the App
+### Step 7: Launch the App
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-### Step 9: Use the App!
+### Step 8: Use the App!
 
 1. Your browser will automatically open to `http://localhost:8501`
-2. **Enter your API key** in the sidebar (paste what you copied)
-3. **Upload some documents** (PDF, Word, or text files)
-4. **Click "Analyze Documents"**
-5. **See the magic happen!** ✨
+2. **Upload some documents** (PDF, Word, or text files)
+3. **Click "Analyze Documents"**
+4. **See the magic happen!** ✨
+
+**No API key needed** - it's already configured! 🎆
 
 ---
 

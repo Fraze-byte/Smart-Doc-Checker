@@ -23,6 +23,7 @@ While other tools give you endless lists of potential conflicts, **Smart Doc Che
 - **Python 3.9+** ([Download here](https://python.org/downloads/))
 - **Git** ([Download here](https://git-scm.com/downloads))
 - **Internet connection** (for AI analysis)
+- **That's it!** 🚀 API key is pre-configured for instant use
 
 ### 📋 Step-by-Step Installation
 
@@ -55,20 +56,14 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-5. **Get your FREE API key** 
-   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - Sign in with Google account
-   - Click "Create API Key" 
-   - Copy the key (starts with "AIza...")
-
-6. **Run the application**
+5. **Run the application**
 ```bash
 streamlit run streamlit_app.py
 ```
 
-7. **Open your browser** to `http://localhost:8501`
-   - Enter your API key when prompted
-   - Start analyzing documents!
+6. **Open your browser** to `http://localhost:8501`
+   - Start analyzing documents immediately!
+   - No API key setup needed - it's pre-configured! 🎉
 
 ### ⚡ One-Line Install (Advanced Users)
 ```bash
