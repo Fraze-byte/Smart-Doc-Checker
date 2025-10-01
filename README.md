@@ -20,40 +20,117 @@ While other tools give you endless lists of potential conflicts, **Smart Doc Che
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.9+
-- Google AI API Key (Gemini)
+- **Python 3.9+** ([Download here](https://python.org/downloads/))
+- **Git** ([Download here](https://git-scm.com/downloads))
+- **Internet connection** (for AI analysis)
 
-### Installation
+### 📋 Step-by-Step Installation
 
-1. **Clone the repository**
+#### For Complete Beginners:
+
+1. **Install Python** (if not already installed)
+   - Download from [python.org](https://python.org/downloads/)
+   - ✅ Check "Add Python to PATH" during installation
+   - Verify: Open terminal/cmd and type `python --version`
+
+2. **Clone this repository**
 ```bash
 git clone https://github.com/Fraze-byte/Smart-Doc-Checker.git
 cd Smart-Doc-Checker
 ```
 
-2. **Set up virtual environment**
+3. **Create isolated environment** (recommended)
 ```bash
-python -m venv .venv
-.venv\Scripts\activate  # Windows
-# source .venv/bin/activate  # macOS/Linux
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS/Linux  
+python -m venv venv
+source venv/bin/activate
 ```
 
-3. **Install dependencies**
+4. **Install required packages**
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Configure API Key**
-   - Get your Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - The app will prompt for your API key on first use, or
-   - Set it in `config/settings.py`
+5. **Get your FREE API key** 
+   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Sign in with Google account
+   - Click "Create API Key" 
+   - Copy the key (starts with "AIza...")
 
-5. **Run the application**
+6. **Run the application**
 ```bash
 streamlit run streamlit_app.py
 ```
 
-6. **Open your browser** to `http://localhost:8503`
+7. **Open your browser** to `http://localhost:8501`
+   - Enter your API key when prompted
+   - Start analyzing documents!
+
+### ⚡ One-Line Install (Advanced Users)
+```bash
+git clone https://github.com/Fraze-byte/Smart-Doc-Checker.git && cd Smart-Doc-Checker && python -m venv venv && venv\Scripts\activate && pip install -r requirements.txt && streamlit run streamlit_app.py
+```
+
+### 🔧 Alternative Setup Methods
+
+#### Method 1: Using Conda
+```bash
+git clone https://github.com/Fraze-byte/Smart-Doc-Checker.git
+cd Smart-Doc-Checker
+conda create -n smart-doc python=3.9
+conda activate smart-doc
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+#### Method 2: Using Docker (Coming Soon)
+```bash
+docker pull fraze-byte/smart-doc-checker
+docker run -p 8501:8501 fraze-byte/smart-doc-checker
+```
+
+### 🚨 Common Setup Issues & Solutions
+
+#### Problem: "python is not recognized"
+**Solution**: Python not in PATH
+- Reinstall Python with "Add to PATH" checked
+- Or manually add Python to system PATH
+
+#### Problem: "pip install fails"  
+**Solution**: Update pip first
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+#### Problem: "streamlit command not found"
+**Solution**: Virtual environment not activated
+```bash
+# Activate virtual environment first
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # macOS/Linux
+```
+
+#### Problem: "Port 8501 already in use"
+**Solution**: Use different port
+```bash
+streamlit run streamlit_app.py --server.port 8502
+```
+
+### 🎯 Verification Steps
+
+After installation, verify everything works:
+
+1. **Check Python**: `python --version` (should show 3.9+)
+2. **Check Streamlit**: `streamlit --version` 
+3. **Test App**: Visit `http://localhost:8501`
+4. **Upload Test File**: Try uploading a simple .txt file
+5. **Enter API Key**: Use your Gemini API key
+6. **Run Analysis**: Should see conflict detection results
 
 ## 📋 Features
 
